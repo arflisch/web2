@@ -29,17 +29,8 @@ const MENU = [
   },
 ];
 
-/* Read all the pizzas from the menu
-   GET /pizzas?order=title : ascending order by title
-   GET /pizzas?order=-title : descending order by title
-*/
-let nbrGetRequest = 0;
 
 router.get('/', (req, res, next) => {
-  if(req.get){
-    nbrGetRequest++;
-  }
-  console.log('Request counter: \nGET /pizzas : ' , nbrGetRequest);
    res.json(MENU);
 });
 
