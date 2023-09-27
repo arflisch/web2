@@ -20,22 +20,22 @@ let nbrDeleteRequest = 0;
 
 const METHODE = {
     get: '/',
-    getpizza: '/pizza',
-    post: '/pizza',
-    delete: '/pizza',
+    getpizza: '/pizzas',
+    post: '/pizzas',
+    delete: '/pizzas',
 };
 
 app.use((req, res, next) => {
-    if(METHODE.get === req.get){
+    if(METHODE.get === req.method){
         nbrGetRequest++;
     }
-    if(METHODE.getpizza === req.get){
+    if(METHODE.getpizza === req.method){
         nbrGetPizzaRequest++;
     }
-    if(METHODE.post === req.post){
+    if(METHODE.post === req.method){
         nbrPostRequest++;
     }
-    if(METHODE.delete === req.delete){
+    if(METHODE.delete === req.method){
         nbrDeleteRequest++;
     }
     console.log('Request counter:');
