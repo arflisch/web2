@@ -1,0 +1,13 @@
+### Create a pizza
+POST http://localhost:3000/film
+Content-Type: application/json
+
+{
+    "title":"Film",
+    "duration":105,
+    "budget":70,
+    "link":""
+}
+
+### Read all pizzas
+GET http://localhost:3000/film
