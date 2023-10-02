@@ -1,7 +1,6 @@
-
 @baseUrl = http://localhost:3000
 ### Create a pizza
-POST {{{{baseUrl}}}}/films
+POST {{baseUrl}}/films
 Content-Type: application/json
 
 {
@@ -11,7 +10,8 @@ Content-Type: application/json
     "link":""
 }
 
-
+### Read all pizzas
+GET {{baseUrl}}/films
 
 ### Delete pizza identified by 2
 DELETE {{baseUrl}}/films/2
