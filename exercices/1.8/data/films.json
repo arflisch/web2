@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Fast and Furious",
+        "duration": 110,
+        "budget": 150,
+        "link": "https://fr.wikipedia.org/wiki/Fast_and_Furious_(s%C3%A9rie_de_films)"
+    },
+    {
+        "id": 3,
+        "title": "Spider Man",
+        "duration": 90,
+        "budget": 40,
+        "link": "https://fr.wikipedia.org/wiki/Spider-Man"
+    },
+    {
+        "id": 4,
+        "title": "Status Update",
+        "duration": 94,
+        "budget": 5,
+        "link": "https://en.wikipedia.org/wiki/Status_Update"
+    },
+    {
+        "id": 5,
+        "title": "Film",
+        "duration": 105,
+        "budget": 70,
+        "link": ""
+    }
+]
