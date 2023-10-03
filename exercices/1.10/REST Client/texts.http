@@ -1,0 +1,40 @@
+######### NORMAL OPERATION  ###########
+
+### Read all pizzas
+GET http://localhost:3000/texts
+
+### Read all pizzas with File variable
+@baseUrl = http://localhost:3000
+GET {{baseUrl}}/texts
+
+### Read all pizzas sorted by title (ascending)
+GET {{baseUrl}}/texts/?level=toto
+
+### Read all pizzas sorted by title (descending)
+GET {{baseUrl}}/texts/?level=medium
+
+### Read pizza identified by 2
+GET {{baseUrl}}/texts/2
+
+### Create a pizza
+POST {{baseUrl}}/texts
+Content-Type: application/json
+
+{
+    "content":"new text",
+    "level": "toto"
+}
+
+### Delete pizza identified by 2
+DELETE {{baseUrl}}/texts/4
+
+### Update the pizza identified by 6
+PATCH {{baseUrl}}/texts/3
+Content-Type: application/json
+
+{
+    "content":"Magic Green 2"
+}
+
+
+
