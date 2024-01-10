@@ -1,0 +1,25 @@
+@baseUrl = http://localhost:3000
+### Create a pizza
+POST {{baseUrl}}/films
+Content-Type: application/json
+
+{
+    "title":"Film2",
+    "duration":105,
+    "budget":70,
+    "link":"//"
+}
+
+### Read all pizzas
+GET {{baseUrl}}/films
+
+### Delete pizza identified by 2
+DELETE {{baseUrl}}/films/5
+
+### Update the pizza identified by 6
+PATCH {{baseUrl}}/films/2
+Content-Type: application/json
+
+{
+    "title":"Magic Green 2"
+}
