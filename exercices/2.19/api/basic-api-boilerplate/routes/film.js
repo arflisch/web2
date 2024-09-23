@@ -7,6 +7,8 @@ const {
     updateOneFilm,
 } = require('../models/film');
 
+const { authorize } = require('../utils/auths');
+
 const router = express.Router();
 
 /* Read all the pizzas from the menu
@@ -29,7 +31,7 @@ router.get('/:id', (req, res) => {
 });
 
 // Create a pizza to be added to the menu.
-router.post('/', (req, res) => {
+router.post('/', authorize, (req, res) => {
   const title = req?.body?.title?.length !== 0 ? req.body.title : undefined;
   const duration = req?.body?.duration > 0 ? req.body.duration : undefined;
   const budget = req?.body?.budget > 0 ? req.body.budget : undefined;
@@ -43,7 +45,7 @@ router.post('/', (req, res) => {
 });
 
 // Delete a pizza from the menu based on its id
-router.delete('/:id', (req, res) => {
+router.delete('/:id', authorize, (req, res) => {
   const deletedFilm = deleteOneFilm(req.params.id);
 
   if (!deletedFilm) return res.sendStatus(404);
@@ -52,7 +54,7 @@ router.delete('/:id', (req, res) => {
 });
 
 // Update a pizza based on its id and new values for its parameters
-router.patch('/:id', (req, res) => {
+router.patch('/:id', authorize, (req, res) => {
   const title = req?.body?.title;
   const budget = req?.body?.budget;
 
